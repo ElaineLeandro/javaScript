@@ -32,3 +32,8 @@ button {
     padding: 10px 20px;
     margin: 0 10px;
 }
+
+.relogio{
+    font-size: 3em;
+    color:rgb(242, 22, 58);
+}
