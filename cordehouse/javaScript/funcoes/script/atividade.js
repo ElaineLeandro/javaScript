@@ -9,7 +9,7 @@
  * Em caso positivo, mostre uma mensagem indicativa en um console
  */
 
-let numero = prompt("Por favor, insira um número:")
+let numero = parseInt(prompt("Por favor, insira um número:"))
 
 if(numero >= 10 && numero <= 50){
     alert("O número está entre 10 e 50!")
