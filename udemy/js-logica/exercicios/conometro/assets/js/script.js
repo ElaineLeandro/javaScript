@@ -1,31 +1,46 @@
-const relogio = document.querySelector('.relogio');
-const iniciar = document.querySelector('.iniciar');
-const pausar = document.querySelector('.pausar')
-const zerar = document.querySelector('.zerar')
+const relogio = () => {
+    const relogio = document.querySelector('.relogio');
+let segundos = 0;
+let timer;
 
-iniciar.addEventListener('click', function(event) {
-    alert('Clique no botão Iniciar');
-});
+const criaHoraDosSegundos = (segundos) => {
+    const data = new Date(segundos * 1000);
 
-pausar.addEventListener('click', function(event) {
-    alert('Clique no botão Pausar');
-});
+    return data.toLocaleTimeString('pt-BR', {
+        hour12: false,
+        timeZone: 'UTC'
+    });
+};
 
-zerar.addEventListener('click', function(event) {
-    alert('Clique no botão Zerar');
-});
+const iniciarRelogio = () =>  {
+    timer = setInterval(() => {
+        segundos++;
+        relogio.innerHTML = criaHoraDosSegundos(segundos)
+    }, 1000)
+};
 
-// function iniciarRelogio() {
-//     alert('Clique no botão Iniciar');
-//     // Adicionar lógica de iniciar o relógio, se necessário
-// }
+document.addEventListener('click', (event) => {
+    const clickedElement  = event.target;
 
-// function pausarRelogio() {
-//     alert('Clique no botão Pausar');
-//     // Adicionar lógica de pausar o relógio, se necessário
-// }
+    if(clickedElement .classList.contains('zerar')){
+        relogio.classList.remove('pausado')
+        clearInterval(timer)
+        relogio.innerHTML = '00:00:00'
+        segundos = 0
+    }
+    if(clickedElement.classList.contains('iniciar')){
+        relogio.classList.remove('pausado')
+        clearInterval(timer)
+        iniciarRelogio();
+    }
+    if(clickedElement.classList.contains('pausar')){
+        clearInterval(timer);
+        relogio.classList.add('pausado')
+  
+    }
+    
+})
 
-// function zerarRelogio() {
-//     alert('Clique no botão Zerar');
-//     // Adicionar lógica de zerar o relógio, se necessário
-// }
+}
+
+relogio()
