@@ -20,9 +20,18 @@
 
 
 class Animal{
+    constructor(color= 'yellow', energy = 100){}
+    isActive(){
+
+
+        
+    }
+
 
 }
 
+    
+//Em seguida, posso codificar, por exemplo, a subclasseCat, assim:
 class Cat extends Animal{
     
 }
