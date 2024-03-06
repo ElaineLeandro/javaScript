@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2 {
+    margin-bottom: 10px;
+  }
+  
+  div {
+    margin-bottom: 20px;
+  }
+  
+  input[type="number"] {
+    width: 100px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #resultadoParcelas, #resultadoEmprestimo, #resultadoEntrada, #resultadoSomaMedia {
+    margin-top: 10px;
+  }
+  

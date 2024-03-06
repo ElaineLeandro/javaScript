@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos em JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Exemplo 1: Solicitar a quantidade de parcelas -->
+<div>
+    <h2>Exemplo 1: Solicitar a quantidade de parcelas</h2>
+    <label for="quantidadeParcelas">Quantidade de Parcelas:</label>
+    <input type="number" id="quantidadeParcelas">
+    <button onclick="exibirValorParcelas()">Exibir Valor das Parcelas</button>
+    <div id="resultadoParcelas"></div>
+  </div>
+  
+  <!-- Exemplo 2: Simular um empréstimo -->
+  <div>
+    <h2>Exemplo 2: Simular um empréstimo</h2>
+    <label for="valorEmprestimo">Valor do Empréstimo:</label>
+    <input type="number" id="valorEmprestimo">
+    <button onclick="exibirValorParcelasDecrescentes()">Exibir Valor das Parcelas Decrescentes</button>
+    <div id="resultadoEmprestimo"></div>
+  </div>
+  
+  <!-- Exemplo 3: Solicitar entrada até digitar "sair" -->
+  <div>
+    <h2>Exemplo 3: Solicitar entrada até digitar "sair"</h2>
+    <button onclick="solicitarEntrada()">Solicitar Entrada</button>
+    <div id="resultadoEntrada"></div>
+  </div>
+  
+  <!-- Exemplo 4: Inserir valores e exibir soma e média -->
+  <div>
+    <h2>Exemplo 4: Inserir valores e exibir soma e média</h2>
+    <button onclick="calcularSomaEMedia()">Inserir Valor</button>
+    <div id="resultadoSomaMedia"></div>
+  </div>
+      <script src="./js/script.js"></script>
+</body>
+</html>
